@@ -13,43 +13,44 @@
 body, html {
   height: 100%;
   margin: 0;
-  background: linear-gradient(45deg, rgba(57,0,152,1) 0%, rgba(197,28,116,1) 40%, rgba(213,102,35,1) 100%) no-repeat;
+  padding: 0;
+  background: linear-gradient(to top, rgba(57,0,152,1) 0%, rgba(197,28,116,1) 40%, rgba(213,102,35,1) 100%) no-repeat;
   background-color: #390098;
+  overflow: hidden;
 }
+
 div.icon {
   font-size: 8em;
   margin-bottom: -100px; 
-
+  z-index: 1000;
+  position: relative;
 }
+
+div.text {
+  z-index: 1000;
+  position: relative;
+  font-size: 10em;
+  line-height: 0%;
+  color: rgb(228, 228, 228);
+}
+
 .fa-gradient {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,1)), to(rgba(228,228,228,1)));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
 .slow-spin {
   -webkit-animation: fa-spin 24s infinite linear;
   animation: fa-spin 24s infinite linear;
 }
-a:link {
-  text-decoration: none;
-}
-a:visited {
-  text-decoration: none;
-}
-a:hover {
-  text-decoration: underline;
-}
-a:active {
-  text-decoration: underline;
-}
-a {
-  color:  #e4e4e4;
-}
+
 .content {
   max-width: 500px;
   margin: auto;
   text-align: center;
 }
+
 .stripe {
   width: 75px;
   height: 15px;
@@ -61,13 +62,121 @@ a {
     rgb(100, 115, 97) 60% 80%, 
     rgb(93, 85, 90) 80%);
     border-radius: 0.25rem;
+  z-index: 1000;
+  position: relative;
 }
-.gradient {
-  background: linear-gradient(to top, 
-    rgb(238, 115, 0), 
-    rgb(247, 165, 27));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+
+.circles{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.circles li{
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    animation: animate 25s linear infinite;
+    bottom: -150px;
+    
+}
+
+.circles li:nth-child(1){
+    left: 25%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+}
+
+
+.circles li:nth-child(2){
+    left: 10%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 2s;
+    animation-duration: 12s;
+}
+
+.circles li:nth-child(3){
+    left: 70%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 4s;
+}
+
+.circles li:nth-child(4){
+    left: 40%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 0s;
+    animation-duration: 18s;
+}
+
+.circles li:nth-child(5){
+    left: 65%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 0s;
+}
+
+.circles li:nth-child(6){
+    left: 75%;
+    width: 110px;
+    height: 110px;
+    animation-delay: 3s;
+}
+
+.circles li:nth-child(7){
+    left: 35%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 7s;
+}
+
+.circles li:nth-child(8){
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 15s;
+    animation-duration: 45s;
+}
+
+.circles li:nth-child(9){
+    left: 20%;
+    width: 15px;
+    height: 15px;
+    animation-delay: 2s;
+    animation-duration: 35s;
+}
+
+.circles li:nth-child(10){
+    left: 85%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+    animation-duration: 11s;
+}
+
+@keyframes animate {
+
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+
+    100%{
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+
 }
 -->
 </style>
@@ -81,11 +190,25 @@ a {
   <div class="content">
   <br/><br/><br/><br/>
   <div class="icon"><i class="fa fa-repeat slow-spin fa-gradient" aria-hidden="true"></i></div>
-  <p style="font-size: 10em; line-height: 0%; color: #e4e4e4;">
+  <div class="text"><p>
     <span style="font-family: 'Teko', sans-serif;">0</span><span style="font-family: 'Expletus Sans', cursive; font-size: 0.8em">x</span><span style="font-family: 'Teko', sans-serif;">01</span>
-  </p>
+  </p></div>
   <br/><br/>
   <p class="stripe"></p>
 </div>
+
+<ul class="circles">
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+</ul>
+
 </body>
 </html>
