@@ -4,17 +4,21 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 <meta name="robots" content="noarchive"/>
 <title>0x01</title>
-<link href="https://fonts.googleapis.com/css?family=Megrim%7CTomorrow:500%7CShare+Tech+Mono&display=swap" rel="stylesheet">
 <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Expletus+Sans&family=Teko&display=swap" rel="stylesheet"> 
 <style>
 <!--
 body {
-  background: linear-gradient(0deg, rgba(57,0,152,1) 0%, rgba(197,28,116,1) 40%, rgba(213,102,35,1) 100%) no-repeat;
+  background: linear-gradient(45deg, rgba(57,0,152,1) 0%, rgba(197,28,116,1) 40%, rgba(213,102,35,1) 100%) no-repeat;
   background-size: 100% 150%;
   background-color: #390098;
 }
-span.icon {
+div.icon {
   font-size: 8em;
+  margin-bottom: -100px; 
+
 }
 .fa-gradient {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,1)), to(rgba(228,228,228,1)));
@@ -22,8 +26,8 @@ span.icon {
   -webkit-text-fill-color: transparent;
 }
 .slow-spin {
-  -webkit-animation: fa-spin 12s infinite linear;
-  animation: fa-spin 12s infinite linear;
+  -webkit-animation: fa-spin 24s infinite linear;
+  animation: fa-spin 24s infinite linear;
 }
 a:link {
   text-decoration: none;
@@ -45,6 +49,25 @@ a {
   margin: auto;
   text-align: center;
 }
+.stripe {
+  width: 75px;
+  height: 15px;
+  margin: auto;
+  background-image: linear-gradient(to right, 
+    rgb(238, 115, 0) 20%, 
+    rgb(247, 165, 27) 20% 40%, 
+    rgb(146, 151, 76) 40% 60%, 
+    rgb(100, 115, 97) 60% 80%, 
+    rgb(93, 85, 90) 80%);
+    border-radius: 0.25rem;
+}
+.gradient {
+  background: linear-gradient(to top, 
+    rgb(238, 115, 0), 
+    rgb(247, 165, 27));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 -->
 </style>
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -56,12 +79,12 @@ a {
 <body>
   <div class="content">
   <br/><br/><br/><br/>
-  <span class="icon"><i class="fa fa-cog slow-spin fa-gradient" aria-hidden="true"></i></span>
-  <p style = "font-family: 'Share Tech Mono', monospace; font-size: 8em; line-height: 0%; color: #e4e4e4;">
-  <span>0x01</span>
+  <div class="icon"><i class="fa fa-repeat slow-spin fa-gradient" aria-hidden="true"></i></div>
+  <p style="font-size: 10em; line-height: 0%; color: #e4e4e4;">
+    <span style="font-family: 'Teko', sans-serif;">0</span><span style="font-family: 'Expletus Sans', cursive; font-size: 0.8em">x</span><span style="font-family: 'Teko', sans-serif;">01</span>
   </p>
   <br/><br/>
-  <a href="https://a118.com"><p><span style = "font-family: 'Tomorrow', sans-serif; font-size: 1em; line-height: 0%;">Project</span> <span style = "font-family: 'Megrim', sans-serif; font-size: 1.2em; line-height: 0%;">A118</span></p></a>
+  <p class="stripe"></p>
 </div>
 </body>
 </html>
