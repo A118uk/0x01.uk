@@ -3,45 +3,31 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 <meta name="robots" content="noarchive"/>
-<title>0x01</title>
-<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Expletus+Sans&family=Teko&display=swap" rel="stylesheet"> 
+<title>Zero One</title>
 <style>
 <!--
+/** Montserrat-Alt1 Light **/
+@font-face {
+    font-family: "Montserrat-Alt1";
+    font-weight: 300;
+    font-style: normal;
+    src: url("MontserratAlt1-Light.woff2") format("woff2"),
+         url("MontserratAlt1-Light.woff") format("woff");
+}
+
 body, html {
   height: 100%;
   margin: 0;
   padding: 0;
-  background-image: linear-gradient(to top, rgb(44, 88, 202), rgb(142, 218, 219));
+  background-color: rgb(39, 39, 41);
   overflow: hidden;
 }
 
-div.icon {
-  font-size: 8em;
-  margin-bottom: -100px; 
-  z-index: 1000;
-  position: relative;
-}
-
 div.text {
-  z-index: 1000;
-  position: relative;
-  font-size: 10em;
-  line-height: 0%;
-  color: rgb(228, 228, 228);
-}
-
-.fa-gradient {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,1)), to(rgba(228,228,228,1)));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.slow-spin {
-  -webkit-animation: fa-spin 24s infinite linear;
-  animation: fa-spin 24s infinite linear;
+  font-size: 4em;
+  color: rgb(240, 240, 240);
+  font-family: 'Montserrat-Alt1', sans-serif;
+  font-weight: 300;
 }
 
 .content {
@@ -80,7 +66,7 @@ div.text {
     list-style: none;
     width: 20px;
     height: 20px;
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.02);
     animation: animate 25s linear infinite;
     bottom: -150px;
     
@@ -188,10 +174,7 @@ div.text {
 <body>
   <div class="content">
   <br/><br/><br/><br/>
-  <div class="icon"><i class="fa fa-repeat slow-spin fa-gradient" aria-hidden="true"></i></div>
-  <div class="text"><p>
-    <span style="font-family: 'Teko', sans-serif;">0</span><span style="font-family: 'Expletus Sans', cursive; font-size: 0.8em">x</span><span style="font-family: 'Teko', sans-serif;">01</span>
-  </p></div>
+  <p><div class="text">ZERO <div style="color: rgb(182, 149, 84); display: inline;">ONE</div></div></p>
   <br/><br/>
   <p class="stripe"></p>
 </div>
